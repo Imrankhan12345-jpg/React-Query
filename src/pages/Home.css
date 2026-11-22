@@ -1,0 +1,252 @@
+.home-container {
+    width: 100%;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f3f4f6; /* Clean, natural off-white background */
+    color: #111827;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 40px;
+    flex: 1;
+    gap: 60px;
+}
+
+/* Left Section */
+.home-left-section {
+    flex: 1.1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    animation: fadeUp 0.6s ease-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#home-title {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    color: #111827;
+    letter-spacing: -0.02em;
+}
+
+.home-subtitle {
+    color: #4b5563;
+    font-size: 17px;
+    margin-bottom: 34px;
+    line-height: 1.6;
+    max-width: 480px;
+}
+
+/* Buttons with Hover Right Arrow Animation */
+.home-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.home-nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.btn-arrow {
+    display: inline-block;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateX(-8px);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover par arrow smooth slide hokar dikhega */
+.home-nav-btn:hover .btn-arrow {
+    width: 18px;
+    opacity: 1;
+    margin-left: 8px;
+    transform: translateX(0);
+}
+
+.user-btn {
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+.user-btn:hover {
+    background-color: #0f172a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(15, 23, 42, 0.18);
+}
+
+.product-btn {
+    background-color: #ffffff;
+    color: #1e293b;
+    border: 1px solid #d1d5db;
+}
+
+.product-btn:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Right Section: Clean Realistic Card */
+.home-right-section {
+    flex: 0.9;
+    display: flex;
+    justify-content: flex-end;
+    animation: fadeUp 0.8s ease-out;
+}
+
+.dashboard-card {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 4px 10px -2px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.card-top h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.version-tag {
+    background: #f3f4f6;
+    color: #4b5563;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+.card-desc {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.stat-box {
+    background: #f9fafb;
+    border: 1px solid #f3f4f6;
+    padding: 12px 14px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.stat-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.progress-section {
+    border-top: 1px solid #f3f4f6;
+    padding-top: 18px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #374151;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 7px;
+    background: #e5e7eb;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 100%;
+    height: 100%;
+    background-color: #2563eb;
+    border-radius: 6px;
+    animation: slideBar 1.2s ease-out;
+}
+
+@keyframes slideBar {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .home-content-wrapper {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    .home-left-section {
+        align-items: center;
+        text-align: center;
+    }
+    .home-right-section {
+        justify-content: center;
+        width: 100%;
+    }
+}
