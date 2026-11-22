@@ -5,9 +5,9 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
   <StrictMode>
+    <BrowserRouter basename="/React-Query">
     <App />
+    </BrowserRouter>
   </StrictMode>
-  </BrowserRouter>
 )
